@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select A Template</title>
+
+    <!--==== CSS ====-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--=============== BOXICONS ===============-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <header>
+        <img src="../images/logo.png" id="careercanvas" alt="logo">
+        <ul class="navitems">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#">Templates</a></li>
+            <li><a href="../index.html#about">About Us</a></li>
+            <li><a href="../index.html#howItWorks">How It Works</a></li>
+        </ul>
+            <div class="bx bx-menu" id="menu-icon"></div>    
+    </header>
+
+    <section>
+        <div class="tempTitle">
+            <h1>Please Select a Template</h1>
+            <p>more templates are coming soon!</p>
+        </div>
+
+        <div class="tempImages">
+            <img src="../images/template1.png" alt="resume template" id="template1">
+            <img src="../images/template2.png" alt="resume template" id="template2">
+            <img src="../images/template3.png" alt="resume template" id="template3">
+            <img src="../images/template4.png" alt="resume template" id="template4">
+            <img src="../images/template5.png" alt="resume template" id="template5">
+        </div>
+
+    </section>
+
+    <!--==== RESPONSIVE NAVBAR ====-->
+    <script>
+        let menu = document.querySelector('#menu-icon');
+        let navitems = document.querySelector('.navitems');
+
+        menu.onclick = () => {
+            menu.classList.toggle('bx-x');
+            navitems.classList.toggle('open')
+        }
+        const header = document.querySelector("header");
+        window.addEventListener("scroll", function(){
+            header.classList.toggle("sticky", window.scrollY > 80)
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

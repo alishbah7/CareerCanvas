@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+
+    <!--==== CSS ====-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--=============== BOXICONS ===============-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+
+    <header id="header">
+        <img src="../images/logo.png" id="careercanvas" alt="logo">
+        <ul class="navitems">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../templates/index.html">Templates</a></li>
+            <li><a href="../index.html#about">About Us</a></li>
+            <li><a href="../index.html#howItWorks">How It Works</a></li>
+        </ul>
+            <div class="bx bx-menu" id="menu-icon"></div>    
+    </header>
+
+    <div class="tempTitle">
+        <p id="tempP">Edit your resume and customize colors by clicking on the sections</p>
+    </div>
+
+    <section class="tempSec">
+        <!--=============== TEMPLATE 1 ===============-->
+        <div class="template1" id="template1">
+            <div class="resume-container-temp1" id="resume-container">
+                <div class="user-name-temp1 changeBackground">
+                    <h1 class="changeFontColor" id="name" contenteditable="true"></h1>
+                </div>
+                <div class="leftRightSections">
+                    <div class="left-section-temp1">
+                        <div class="section-temp1 profile-objective">
+                            <h2 class="changeFontColor">Profile</h2>
+                            <p id="obj" contenteditable="true"></p>
+                        </div>
+                        <div class="section-temp1 education">
+                            <h2 class="changeFontColor">Education</h2>
+                            <ul id="displayEdu" contenteditable="true"></ul>
+                        </div>
+                        <div class="section-temp1 experience">
+                            <h2 class="changeFontColor">Experience</h2>
+                            <ul id="displayExp" contenteditable="true">
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="right-section-temp1 changeBackground">
+                        <div class="contact-info-temp1" style="margin-top: 20px;">
+                            <h2 class="changeFontColor">Contact</h2>
+                            <p id="ph" style="margin-top: 5px;" contenteditable="true"></p>
+                            <p id="em" contenteditable="true"></i></p>
+                        </div>
+                        <div class="skills-temp1">
+                            <h2 class="changeFontColor">Skills</h2>
+                            <ul id="displaySkills" contenteditable="true">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--=============== TEMPLATE 2 ===============-->
+        <div class="template2" id="template2">
+            <div class="resume-container-temp2" id="resume-container">
+                <div class="user-name-temp2 changeBackground">
+                    <h1 id="name" class="changeFontColor" contenteditable="true"></h1>
+                </div>
+                <div class="content-temp2 changeBackground">
+                    <div class="left-section-temp2">
+                        <div class="section-temp2 contact-info-temp2">
+                            <h2 class="changeFontColor">Contact</h2>
+                            <ul id="contactList-temp2">
+                                <li id="ph" contenteditable="true"></li>
+                                <li id="em" contenteditable="true"></li>
+                            </ul>
+                        </div>
+                        <div class="section-temp2 skills-temp2">
+                            <h2 class="changeFontColor">Skills</h2>
+                            <ul id="displaySkills" class="displaySkills-temp2" contenteditable="true">
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="right-section-temp2">
+                        <div class="section-temp2 profile-temp2" style="margin-left: 40px;">
+                            <h2 class="changeFontColor">Profile</h2>
+                            <p class="paraWidth" id="obj" contenteditable="true">
+                            </p>
+                        </div>
+                        <div class="section-temp2 education-temp2" style="margin-left: 40px;">
+                            <h2 class="changeFontColor">Education</h2>
+                            <ul id="displayEdu" class="displayEdu-temp2" contenteditable="true">
+                                
+                            </ul>
+                        </div>
+                        <div class="section-temp2 experience-temp2" style="margin-left: 40px;">
+                            <h2 class="changeFontColor">Work Experience</h2>
+                            <ul id="displayExp" class="displayExp-temp2" contenteditable="true">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--=============== TEMPLATE 3 ===============-->
+        <div class="template3" id="template3">
+            <div class="resume-container-temp3" id="resume-container">
+                <div class="left-section-temp3 changeBackground">
+                    <div class="user-name-temp3">
+                        <h1 id="name" class="changeFontColor" contenteditable="true"></h1>
+                    </div>
+                    <div class="contact-info-temp3">
+                        <h2 class="changeFontColor">Contact</h2>
+                        <p id="ph" contenteditable="true"></p>
+                        <p id="em" class="em" contenteditable="true"></p>
+                    </div>
+                    <div class="skills-temp3">
+                        <h2 class="changeFontColor">Skills</h2>
+                        <ul id="displaySkills" contenteditable="true">
+                        </ul>
+                    </div>
+                </div>
+                <div class="right-section-temp3">
+                    <div class="profile-objective-temp3 changeBackground">
+                        <h2 class="changeFontColor">Career Objective</h2>
+                        <p id="obj" contenteditable="true"></p>
+                    </div>
+                    <div class="education-temp3">
+                        <h2 class="changeFontColor">Education</h2>
+                        <ul id="displayEdu" contenteditable="true">
+                        </ul>
+                    </div>
+                    <div class="experience-temp3">
+                        <h2 class="changeFontColor">Experience</h2>
+                        <ul id="displayExp" contenteditable="true">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--=============== TEMPLATE 4 ===============-->
+        <div class="template4" id="template4">
+            <div class="resume-container-temp4" id="resume-container">
+                <div class="upperLayer changeBackground">
+                    <div class="nameAndContact">
+                        <div class="user-name-temp4">
+                            <h1 id="name" class="changeFontColor" contenteditable="true"></h1>
+                        </div>
+                        <div class="contact-info-temp4">
+                            <p id="ph" contenteditable="true" class="changeFontColor"></p>
+                            <p id="em" contenteditable="true" class="changeFontColor"></p>
+                        </div>
+                    </div>
+                <div class="profile-objective-temp4">
+                    <p id="obj" contenteditable="true" class="changeFontColor">
+                    </p>
+                </div>
+                </div>
+                <div class="section-education-temp4">
+                    <h2 class="changeBackground eduH changeFontColor">Education</h2>
+                    <ul id="displayEdu" contenteditable="true">
+                    </ul>
+                </div>
+                <div class="section-experience-temp4">
+                    <h2 class="changeBackground expH changeFontColor">Experience</h2>
+                    <ul id="displayExp" contenteditable="true">
+                    </ul>
+                </div>
+                <div class="section-skills-temp4">
+                    <h2 class="changeBackground skillH changeFontColor">Skills</h2>
+                    <ul id="displaySkills" contenteditable="true">
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <!--=============== TEMPLATE 5 ===============-->
+        <div class="template5" id="template5">
+            <div class="resume-container-temp5" id="resume-container">
+                <div class="left-section-temp5 changeBackground">
+                    <div class="personalInfo changeBackground">
+                        <h1 id="name" class="changeFontColor" contenteditable="true"></h1>
+                        <div class="profile-objective-temp5">
+                            <p id="obj" class="changeFontColor" contenteditable="true"></p>
+                        </div>
+                    </div>
+                    <div class="contactSkillsSec changeBackground">
+                        <div class="contact-info-temp5">
+                            <h2 class="changeFontColor">Contact</h2>
+                            <div class="btmLineTemp5"></div>
+                            <p id="ph" contenteditable="true"></p>
+                            <p id="em" contenteditable="true"></p>
+                        </div>
+                        <div class="section-skills-temp5">
+                            <h2 class="changeFontColor">Skills</h2>
+                            <div class="btmLineTemp5"></div>
+                            <ul id="displaySkills" contenteditable="true">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-section-temp5">
+                    <div class="section-education-temp5">
+                        <h2 class="changeFontColor">Education</h2>
+                        <div class="btmLinetemp5"></div>
+                        <ul id="displayEdu" contenteditable="true">
+                        </ul>
+                    </div>
+                    <div class="section-experience-temp5">
+                        <h2 class="changeFontColor">Experience</h2>
+                        <div class="btmLinetemp5"></div>
+                        <ul id="displayExp" contenteditable="true">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="btns" style="padding: 10px;">
+            <button id="download"><i class='bx bx-download'></i></button>
+            <button id="share"><i class='bx bxs-share-alt' ></i></button>
+            <button><a href="../changeTemplate/index.html" id="changeBtn">Change Template</a></button>
+            <button id="changeFont">Font Color</button>
+        </div>
+    </section>    
+        
+
+    <!--==== RESPONSIVE NAVBAR ====-->
+    <script>
+        let menu = document.querySelector('#menu-icon');
+        let navitems = document.querySelector('.navitems');
+
+        menu.onclick = () => {
+            menu.classList.toggle('bx-x');
+            navitems.classList.toggle('open')
+        }
+        const header = document.querySelector("header");
+        window.addEventListener("scroll", function(){
+            header.classList.toggle("sticky", window.scrollY > 80)
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

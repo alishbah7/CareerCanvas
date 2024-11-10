@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Form</title>
+
+    <!--=== CSS ===-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--==== GOOGLE FONTS ====-->
+    <link href="https://fonts.googleapis.com/css2?family=Cool+Santa&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="profile">
+        <h3>Profile</h3>
+        <div class="row">
+            <div>
+                <h5>Name:</h5>
+                <input type="text" placeholder="e.g. Alishbah" id="userName">
+            </div>
+            <div>
+                <h5>Objective</h5>
+                <textarea name="" id="objective"></textarea>
+            </div>
+        </div>       
+    </div>
+
+    <div class="contactInfo">
+        <h3>Contact Info</h3>
+        <div class="row">
+            <div>
+                <h5>Phone:</h5>
+                <input type="number" placeholder="e.g. +92 000 1234567" id="tel">
+            </div>
+            <div>
+                <h5>Email</h5>
+                <input type="email" placeholder="e.g. abc@gmail.com" id="email">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="educationInfo">
+        <h3>Education</h3>
+        <div class="row">
+            <div>
+                <h5>Education <br> (Comma-Separated):</h5>
+                <input type="text" placeholder="e.g. Degree - Institute, Degree - Institute" id="education">
+            </div>
+        </div>
+    </div>
+    
+    <div class="experienceInfo">
+        <h3>Experience</h3>
+        <div class="row">
+            <div>
+                <h5>Experience <br> (Comma-Separated):</h5>
+                <input type="text" placeholder="e.g. Profession - Year, Profession - Year" id="experience">
+            </div>
+        </div>
+    </div>
+
+    <div class="skillsInfo">
+        <h3>Skills</h3>
+        <div class="row">
+            <div>
+                <h5>Skills <br> (Comma-Separated):</h5>
+                <input type="text" placeholder="e.g. Skill 1, Skill 2" id="pro_skills">
+            </div>
+        </div>
+    </div>
+
+    <div class="submit">
+        <button id="submit" type="button">Submit</button>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
