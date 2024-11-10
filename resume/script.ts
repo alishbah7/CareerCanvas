@@ -261,12 +261,14 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
         
-        function openColorPicker(element) {
+            function openColorPicker(element) {
             let colorInput = document.createElement("input");
             colorInput.type = "color";
             colorInput.style.position = "absolute";
-            colorInput.style.visibility = "hidden";
+            colorInput.style.display = "none"; 
             document.body.appendChild(colorInput);
+        
+            colorInput.style.display = "block";
             colorInput.click();
         
             colorInput.addEventListener("input", () => {
@@ -278,7 +280,7 @@ document.addEventListener("DOMContentLoaded", () => {
             colorInput.addEventListener("change", () => {
                 document.body.removeChild(colorInput);
             });
-        };
+        } 
     }
 });
 
