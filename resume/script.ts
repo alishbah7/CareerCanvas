@@ -295,8 +295,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         let selectedFontColor = localStorage.getItem(`fontColor-template${template}`);
         if (selectedFontColor) {
-            fontColorChanger.forEach((color: any) => {
-                color.style.color = selectedFontColor;
+            fontColorChanger.forEach((element: any) => {
+                element.style.color = selectedFontColor;
             });
         }
 
@@ -306,8 +306,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 let colorInput = document.createElement("input");
                 colorInput.type = "color";
                 colorInput.style.position = "absolute";
-                colorInput.style.visibility = "hidden";
+                colorInput.style.display = "none"; 
                 document.body.appendChild(colorInput);
+
+                colorInput.style.display = "block";
                 colorInput.click();
 
                 colorInput.addEventListener("input", () => {

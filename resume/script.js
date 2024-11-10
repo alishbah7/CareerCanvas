@@ -275,8 +275,8 @@ document.addEventListener("DOMContentLoaded", function () {
         var fontColorChanger_1 = Array.from(activeTemplate.querySelectorAll('.changeFontColor'));
         var selectedFontColor_1 = localStorage.getItem("fontColor-template".concat(template));
         if (selectedFontColor_1) {
-            fontColorChanger_1.forEach(function (color) {
-                color.style.color = selectedFontColor_1;
+            fontColorChanger_1.forEach(function (element) {
+                element.style.color = selectedFontColor_1;
             });
         }
         var changeFontBtn = document.getElementById('changeFont');
@@ -285,8 +285,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 var colorInput = document.createElement("input");
                 colorInput.type = "color";
                 colorInput.style.position = "absolute";
-                colorInput.style.visibility = "hidden";
+                colorInput.style.display = "none";
                 document.body.appendChild(colorInput);
+                colorInput.style.display = "block";
                 colorInput.click();
                 colorInput.addEventListener("input", function () {
                     var chosenColor = colorInput.value;
