@@ -19,7 +19,7 @@ a{
     color: rgb(107, 3, 107);
 }
 body{
-    height: 200vh;
+    height: auto;
     background: url(../images/bg-img.jpg);
     background-repeat: no-repeat;
     background-size: cover;
