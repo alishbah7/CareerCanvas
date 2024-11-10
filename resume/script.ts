@@ -216,15 +216,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
 //---==== BACKGROUND COLOR CUSTOMIZATION ====---//
 document.addEventListener("DOMContentLoaded", () => {
+
     let template = localStorage.getItem('template');
     let activeTemplate = document.getElementById(`template${template}`) as HTMLElement | null;
 
     if (activeTemplate) {
-
         let backgroundElements = [
-
-            activeTemplate.querySelector('.user-name-temp1') as HTMLElement | null,
-            activeTemplate.querySelector('.right-section-temp1') as HTMLElement | null,
+            activeTemplate.querySelector('.user-name-temp1'),
+            activeTemplate.querySelector('.right-section-temp1'),
             activeTemplate.querySelector('.content-temp2') as HTMLElement | null,
             activeTemplate.querySelector('.user-name-temp2') as HTMLElement | null,
             activeTemplate.querySelector('.left-section-temp3') as HTMLElement | null,
@@ -235,18 +234,18 @@ document.addEventListener("DOMContentLoaded", () => {
             activeTemplate.querySelector('.skillH') as HTMLElement | null,
             activeTemplate.querySelector('.personalInfo') as HTMLElement | null,
             activeTemplate.querySelector('.contactSkillsSec') as HTMLElement | null,
-
         ];
 
-        backgroundElements.forEach((backgroundColor) => {
+        backgroundElements.forEach((element: any) => {
+            if (element) {
+            
+                element.addEventListener('dblclick', () => {
+                    element.setAttribute("contenteditable", "true");
+                });
 
-            if (backgroundColor) {
-                let chosenColor = localStorage.getItem(`bgColor-template${template}-${backgroundColor.className}`);
-                if (chosenColor) {
-                    backgroundColor.style.backgroundColor = chosenColor;
-                }
+                element.addEventListener("contextmenu", (event) => {
+                    event.preventDefault();
 
-                backgroundColor.addEventListener("click", () => {
                     let colorInput = document.createElement("input");
                     colorInput.type = "color";
                     colorInput.style.position = "absolute";
@@ -256,8 +255,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     colorInput.addEventListener("input", () => {
                         let chosenColor = colorInput.value;
-                        backgroundColor.style.backgroundColor = chosenColor;
-                        localStorage.setItem(`bgColor-template${template}-${backgroundColor.className}`, chosenColor);
+                        element.style.backgroundColor = chosenColor;
+                        localStorage.setItem(`bgColor-template${template}-${element.className}`, chosenColor);
                     });
 
                     colorInput.addEventListener("change", () => {
