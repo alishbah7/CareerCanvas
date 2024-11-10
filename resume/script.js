@@ -228,13 +228,13 @@ document.addEventListener("DOMContentLoaded", function () {
             activeTemplate.querySelector('.personalInfo'),
             activeTemplate.querySelector('.contactSkillsSec'),
         ];
-        backgroundElements.forEach(function (backgroundColor) {
-            if (backgroundColor) {
-                var chosenColor = localStorage.getItem("bgColor-template".concat(template, "-").concat(backgroundColor.className));
-                if (chosenColor) {
-                    backgroundColor.style.backgroundColor = chosenColor;
-                }
-                backgroundColor.addEventListener("click", function () {
+        backgroundElements.forEach(function (element) {
+            if (element) {
+                element.addEventListener('dblclick', function () {
+                    element.setAttribute("contenteditable", "true");
+                });
+                element.addEventListener("contextmenu", function (event) {
+                    event.preventDefault();
                     var colorInput = document.createElement("input");
                     colorInput.type = "color";
                     colorInput.style.position = "absolute";
@@ -243,8 +243,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     colorInput.click();
                     colorInput.addEventListener("input", function () {
                         var chosenColor = colorInput.value;
-                        backgroundColor.style.backgroundColor = chosenColor;
-                        localStorage.setItem("bgColor-template".concat(template, "-").concat(backgroundColor.className), chosenColor);
+                        element.style.backgroundColor = chosenColor;
+                        localStorage.setItem("bgColor-template".concat(template, "-").concat(element.className), chosenColor);
                     });
                     colorInput.addEventListener("change", function () {
                         document.body.removeChild(colorInput);
