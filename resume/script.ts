@@ -236,35 +236,49 @@ document.addEventListener("DOMContentLoaded", () => {
             activeTemplate.querySelector('.contactSkillsSec') as HTMLElement | null,
         ];
 
-        backgroundElements.forEach((element: any) => {
+        backgroundElements.forEach((element) => {
             if (element) {
-            
+
                 element.addEventListener('dblclick', () => {
                     element.setAttribute("contenteditable", "true");
                 });
-
+        
                 element.addEventListener("contextmenu", (event) => {
                     event.preventDefault();
-
-                    let colorInput = document.createElement("input");
-                    colorInput.type = "color";
-                    colorInput.style.position = "absolute";
-                    colorInput.style.visibility = "hidden";
-                    document.body.appendChild(colorInput);
-                    colorInput.click();
-
-                    colorInput.addEventListener("input", () => {
-                        let chosenColor = colorInput.value;
-                        element.style.backgroundColor = chosenColor;
-                        localStorage.setItem(`bgColor-template${template}-${element.className}`, chosenColor);
-                    });
-
-                    colorInput.addEventListener("change", () => {
-                        document.body.removeChild(colorInput);
-                    });
+                    openColorPicker(element);
+                });
+        
+                let tapHoldTimeout;
+                element.addEventListener("touchstart", () => {
+                    tapHoldTimeout = setTimeout(() => {
+                        openColorPicker(element);
+                    }, 500);
+                });
+        
+                element.addEventListener("touchend", () => {
+                    clearTimeout(tapHoldTimeout);
                 });
             }
         });
+        
+        function openColorPicker(element) {
+            let colorInput = document.createElement("input");
+            colorInput.type = "color";
+            colorInput.style.position = "absolute";
+            colorInput.style.visibility = "hidden";
+            document.body.appendChild(colorInput);
+            colorInput.click();
+        
+            colorInput.addEventListener("input", () => {
+                let chosenColor = colorInput.value;
+                element.style.backgroundColor = chosenColor;
+                localStorage.setItem(`bgColor-template${template}-${element.className}`, chosenColor);
+            });
+        
+            colorInput.addEventListener("change", () => {
+                document.body.removeChild(colorInput);
+            });
+        };
     }
 });
 

@@ -235,23 +235,36 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
                 element.addEventListener("contextmenu", function (event) {
                     event.preventDefault();
-                    var colorInput = document.createElement("input");
-                    colorInput.type = "color";
-                    colorInput.style.position = "absolute";
-                    colorInput.style.visibility = "hidden";
-                    document.body.appendChild(colorInput);
-                    colorInput.click();
-                    colorInput.addEventListener("input", function () {
-                        var chosenColor = colorInput.value;
-                        element.style.backgroundColor = chosenColor;
-                        localStorage.setItem("bgColor-template".concat(template, "-").concat(element.className), chosenColor);
-                    });
-                    colorInput.addEventListener("change", function () {
-                        document.body.removeChild(colorInput);
-                    });
+                    openColorPicker(element);
+                });
+                var tapHoldTimeout_1;
+                element.addEventListener("touchstart", function () {
+                    tapHoldTimeout_1 = setTimeout(function () {
+                        openColorPicker(element);
+                    }, 500);
+                });
+                element.addEventListener("touchend", function () {
+                    clearTimeout(tapHoldTimeout_1);
                 });
             }
         });
+        function openColorPicker(element) {
+            var colorInput = document.createElement("input");
+            colorInput.type = "color";
+            colorInput.style.position = "absolute";
+            colorInput.style.visibility = "hidden";
+            document.body.appendChild(colorInput);
+            colorInput.click();
+            colorInput.addEventListener("input", function () {
+                var chosenColor = colorInput.value;
+                element.style.backgroundColor = chosenColor;
+                localStorage.setItem("bgColor-template".concat(template, "-").concat(element.className), chosenColor);
+            });
+            colorInput.addEventListener("change", function () {
+                document.body.removeChild(colorInput);
+            });
+        }
+        ;
     }
 });
 //---==== FONT COLOR CUSTOMIZATION ====---//
