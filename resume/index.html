@@ -251,14 +251,6 @@
             menu.classList.toggle('bx-x');
             navitems.classList.toggle('open')
         }
-
-        let navitemsA = document.querySelectorAll('.navitems a');
-        navitemsA.forEach(item => {
-            item.addEventListener('click', () => {
-                navitems.classList.remove('open');
-                menu.classList.remove('bx-x');
-            });
-        });
         
         const header = document.querySelector("header");
         window.addEventListener("scroll", function(){
