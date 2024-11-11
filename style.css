@@ -38,7 +38,7 @@ header{
 }
 header.sticky{
     padding-top: 0;
-    background: linear-gradient(to right, rgb(211, 249, 211), rgb(182, 255, 231));
+    background: linear-gradient(rgb(230, 255, 222), rgb(176, 255, 229));
     height: 60px;
 }
 header.sticky img{
