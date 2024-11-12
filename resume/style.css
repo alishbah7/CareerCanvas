@@ -40,14 +40,7 @@ header{
     height: 50px;
 }
 header.sticky{
-    padding-top: 0;
-    background: linear-gradient(to right, rgb(211, 249, 211), rgb(182, 255, 231));
-    height: 60px;
-}
-header.sticky img{
-    width: 140px;
-    height: 110px;
-    margin-top: -5px;
+    display: none;
 }
 header img{
     width: 160px; 
@@ -57,8 +50,8 @@ header img{
 }
 @media screen and (max-width: 400px) {
     header img{
-        width: 100px;
-        height: 100px;
+        width: 120px;
+        height: 120px;
     }
 }
 .navitems{
