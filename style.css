@@ -37,15 +37,16 @@ header{
     height: 50px;
 }
 header.sticky{
-    padding-top: 0;
+    /* padding-top: 0;
     background: linear-gradient(rgb(230, 255, 222), rgb(176, 255, 229));
-    height: 60px;
+    height: 60px; */
+    display: none;
 }
-header.sticky img{
+/* header.sticky img{
     width: 140px;
     height: 110px;
     margin-top: -5px;
-}
+} */
 header img{
     width: 160px; 
     height: 140px; 
